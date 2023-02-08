@@ -30,7 +30,17 @@
 }
 
 @media (max-width: 991.98px) {
+    .nav-link{
+        border: 0 !important;
+        padding: 0 !important;
+        line-height: 50px;
+    }
+}
 
+.navbar-toggler{
+    border: 0;
+    background-color: #f2f3f5;
+    box-shadow: none !important;
 }
 
 /* Banner */
@@ -48,8 +58,10 @@
     color: #212529;
 }
 
-.navbar-right{
-    margin-top: -10px;
+@media (min-width: 992px) {
+    .navbar-right{
+        margin-top: -10px;
+    }
 }
 
 /* Button*/
@@ -95,6 +107,11 @@
 .nav-item .btn-primary{
     padding: 10px 20px;
     font-size: 14px;
+}
+
+.btn-lg{
+    font-size: 16px;
+    padding: 1rem 2rem;
 }
 
 /* Footer */
@@ -180,6 +197,10 @@ input{
 }
 
 /* Quantity */
+.quantity{
+    background-color: #fff;
+}
+
 .quantity, .quantity a{
     border: 3px solid #F2F3F5;
     font-size: 20px;
@@ -216,4 +237,39 @@ input{
 /* Card product */
 .card .card-bottom a:hover img{
     opacity: .7;
+}
+
+/* Modal */
+.modal-content{
+    border: 0 !important;
+}
+
+/* Table */
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: #f2f3f5;
+}
+
+.table>:not(caption)>*>*{
+    border: 0 !important;
+}
+
+.table-striped tr:first-child td{
+    padding: 2rem 0
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>td:first-child{
+    border-radius: 10px 0 0 10px;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>td:last-child{
+    border-radius: 0 10px 10px 0;
+}
+
+.table-striped .quantity{
+    width: max-content;
+    margin: auto;
+}
+
+.table .btn{
+    font-size: 12px;
 }
