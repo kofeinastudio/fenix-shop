@@ -51,13 +51,13 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-start align-items-lg-center w-100 mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active text-nowrap" aria-current="page" href="#">Strona główna</a>
+                                    <a class="nav-link text-nowrap" aria-current="page" href="#">Strona główna</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-nowrap" href="#">O nas</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#">Produkty</a>
+                                    <a class="nav-link active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Produkty</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Biżuteria</a></li>
                                         <li><a class="dropdown-item" href="#">Zapachy damskie</a></li>
@@ -78,6 +78,17 @@
                         </div>
                         <div class="navbar-right d-flex flex-column flex-md-row align-items-start align-items-md-center">
                             <ul class="navbar-nav flex-row align-items-center me-4">
+                                <li class="nav-item currency me-4">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>PLN</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="CZK">CZK</option>
+                                        <option value="HUF">HUF</option>
+                                        <option value="RON">RON</option>
+                                        <option value="HRK">HRK</option>
+                                    </select>
+                                </li>
+
                                 <!-- Language -->
                                 <li class="nav-item lang">
                                     <a class="nav-link" href="#"><img src="assets/img/lang/pl.svg"></a>
