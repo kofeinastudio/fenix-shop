@@ -37,9 +37,13 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
                 <img class="py-3" src="assets/img/fenix.svg">
-                <div class="d-flex flex-column flex-md-row align-items-end align-items-md-start banner py-4 p-md-4">
+                <div class="d-flex flex-column flex-md-row align-items-end align-items-md-center banner py-4 p-md-4">
                     <a class="small p-1 px-md-3" href="">Strefa dystrybutora</a>
                     <a id="register" class="small p-1 px-md-3" href="">Rejestracja</a>
+                    <a href="" class="p-1 px-md-3 cart">
+                        <img src="assets/img/cart.svg" alt="">
+                        <p class="cart-quantity small mb-0">2</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -56,7 +60,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-nowrap" href="#">O nas</a>
                                 </li>
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown products">
                                     <a class="nav-link active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Produkty</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Biżuteria</a></li>
@@ -78,37 +82,41 @@
                         </div>
                         <div class="navbar-right d-flex flex-column flex-md-row align-items-start align-items-md-center">
                             <ul class="navbar-nav flex-row align-items-center me-4">
-                                <li class="nav-item currency me-4">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>PLN</option>
-                                        <option value="EUR">EUR</option>
-                                        <option value="CZK">CZK</option>
-                                        <option value="HUF">HUF</option>
-                                        <option value="RON">RON</option>
-                                        <option value="HRK">HRK</option>
-                                    </select>
+                                <li class="nav-item currency me-2">
+                                    <div class="dropdown">
+                                        <button class="btn btn-white border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            PLN
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">EUR</a></li>
+                                            <li><a class="dropdown-item" href="#">CZK</a></li>
+                                            <li><a class="dropdown-item" href="#">HUF</a></li>
+                                            <li><a class="dropdown-item" href="#">RON</a></li>
+                                            <li><a class="dropdown-item" href="#">HRK</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
 
-                                <!-- Language -->
                                 <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/pl.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/en.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/de.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/cz.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/ru.svg"></a>
+                                    <div class="dropdown">
+                                        <button class="btn btn-white border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="assets/img/lang/pl.svg">
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/en.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/de.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/cz.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/ru.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/li.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/cr.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/hu.svg"></a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
 
                             <!-- Button -->
-                            <a class="btn btn-primary text-nowrap" href="#">Pobierz eKatalog</a>
+                            <a class="btn btn-primary text-nowrap my-3 my-md-0" href="#">Pobierz eKatalog</a>
                         </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -123,9 +131,20 @@
     <!-- Content -->
     <div class="content">
         <div class="container">
+            <div class="row breadcrumbs">
+                <div class="col-12 py-4">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-md-start">
+                          <li class="breadcrumb-item small"><a href="#">Strona główna</a></li>
+                          <li class="breadcrumb-item small"><a href="#">Koszyk</a></li>
+                          <li class="breadcrumb-item small active" aria-current="page">Podsumowanie</li>
+                        </ol>
+                      </nav>
+                </div>
+            </div>
 
             <div class="row">
-                <div class="col-12 mt-5 mb-4">
+                <div class="col-12 mb-4">
                     <div class="card bg-white rounded border-0">
                         <div class="card-body p-5">
                             <p class="h3 text-center fw-semi mb-5">Podsumowanie</p>
@@ -160,36 +179,50 @@
                             </div>
 
                             <div class="row mb-5">
-                                <div class="col-12 col-lg-6 mb-3">
-                                    <input class="form-control" type="text" placeholder="Imię" aria-label="default input example">
-                                </div>
-                                <div class="col-12 col-lg-6 mb-3">
-                                    <input class="form-control" type="text" placeholder="Nazwisko" aria-label="default input example">
-                                </div>
-                                <div class="col-12 col-lg-6 mb-3">
-                                    <input class="form-control" type="text" placeholder="Adres e-mail" aria-label="default input example">
-                                </div>
-                                <div class="col-12 col-lg-6 mb-3">
-                                    <input class="form-control" type="text" placeholder="Numer telefonu" aria-label="default input example">
+                                <div class="col-12">
+                                    <p class="h3 text-center text-lg-start fw-semi mb-5">Dane adresowe</p>
                                 </div>
 
-                                <div class="col-12 mb-3">
-                                    <input class="form-control" type="text" placeholder="Nazwa firmy" aria-label="default input example">
+                                <div class="col-12 col-lg-6 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Imię" aria-label="default input example">
+                                    <label for="floatingInput">Imię</label>
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <input class="form-control" type="text" placeholder="NIP" aria-label="default input example">
+                                <div class="col-12 col-lg-6 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Nazwisko" aria-label="default input example">
+                                    <label for="floatingInput">Nazwisko</label>
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <input class="form-control" type="text" placeholder="Kraj" aria-label="default input example">
+                                <div class="col-12 col-lg-6 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Adres e-mail" aria-label="default input example">
+                                    <label for="floatingInput">Adres e-mail</label>
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <input class="form-control" type="text" placeholder="Miasto" aria-label="default input example">
+                                <div class="col-12 col-lg-6 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Numer telefonu" aria-label="default input example">
+                                    <label for="floatingInput">Numer telefonu</label>
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <input class="form-control" type="text" placeholder="Ulica i numer budynku" aria-label="default input example">
+
+                                <div class="col-12 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Nazwa firmy" aria-label="default input example">
+                                    <label for="floatingInput">Nazwa firmy</label>
                                 </div>
-                                <div class="col-12 mb-3">
-                                    <input class="form-control" type="text" placeholder="Kod pocztowy" aria-label="default input example">
+                                <div class="col-12 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="NIP" aria-label="default input example">
+                                    <label for="floatingInput">NIP</label>
+                                </div>
+                                <div class="col-12 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Kraj" aria-label="default input example">
+                                    <label for="floatingInput">Kraj</label>
+                                </div>
+                                <div class="col-12 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Miasto" aria-label="default input example">
+                                    <label for="floatingInput">Miasto</label>
+                                </div>
+                                <div class="col-12 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Ulica i numer budynku" aria-label="default input example">
+                                    <label for="floatingInput">Ulica i numer budynku</label>
+                                </div>
+                                <div class="col-12 form-floating mb-3">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Kod pocztowy" aria-label="default input example">
+                                    <label for="floatingInput">Kod pocztowy</label>
                                 </div>
                             </div>
 

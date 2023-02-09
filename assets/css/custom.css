@@ -216,14 +216,6 @@ input{
 }
 
 /* Dropdown */
-.dropdown-menu{
-    //background-color: #212529;
-    //color: #fff;
-    //opacity: .9;
-    //border-radius: 0 0 10px 10px;
-    //margin-top: -1px !important;
-}
-
 .dropdown-menu li a{
     //background-color: #212529;
     //color: #fff;
@@ -236,7 +228,7 @@ input{
 }
 
 @media (max-width: 991.98px) {
-    .dropdown-menu{
+    .products .dropdown-menu{
         border: 0;
         margin-left: 1.5rem;
     }
@@ -244,6 +236,16 @@ input{
     .dropdown-menu li a{
         padding: 0.25rem 0;
     }
+}
+
+.lang .dropdown-menu, .currency .dropdown-menu{
+    position: absolute;
+    min-width: max-content !important;
+    margin-left: 0;
+}
+
+.lang .dropdown-menu li a, .currency .dropdown-menu li a{
+    padding: .25rem 1.3rem;
 }
 
 /* Card product */
@@ -284,4 +286,71 @@ input{
 
 .table .btn{
     font-size: 12px;
+}
+
+/* Cart */
+.cart{
+    background-color: #f2f3f5;
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cart img{
+    height: 22px;
+}
+
+.cart-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #E6A90E;
+    color: #fff;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+}
+
+/* Form */
+.form-control{
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+}
+
+.form-control:focus{
+    border-color: #E6A90E;
+    box-shadow: none;
+}
+
+/* Breadcrumbs */
+.breadcrumbs nav > ol > li{
+    text-decoration: none;
+    color: #212529 !important;
+    font-weight: 500;
+    padding: 0.25rem 0;
+}
+
+.breadcrumbs nav > ol > li> a{
+    text-decoration: none;
+    color: var(--bs-breadcrumb-item-active-color);
+    font-weight: 400;
+}
+.breadcrumbs nav > ol > li> a:hover{
+    text-decoration: underline;
+    color: #212529 !important;
+    //font-weight: 500;
+}
+
+a[data-bs-target="#addtocart"]{
+    position: relative;
+    z-index: 9999 !important;
 }

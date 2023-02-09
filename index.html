@@ -37,9 +37,13 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
                 <img class="py-3" src="assets/img/fenix.svg">
-                <div class="d-flex flex-column flex-md-row align-items-end align-items-md-start banner py-4 p-md-4">
+                <div class="d-flex flex-column flex-md-row align-items-end align-items-md-center banner py-4 p-md-4">
                     <a class="small p-1 px-md-3" href="">Strefa dystrybutora</a>
                     <a id="register" class="small p-1 px-md-3" href="">Rejestracja</a>
+                    <a href="" class="p-1 px-md-3 cart">
+                        <img src="assets/img/cart.svg" alt="">
+                        <p class="cart-quantity small mb-0">2</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -56,7 +60,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-nowrap" href="#">O nas</a>
                                 </li>
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown products">
                                     <a class="nav-link active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Produkty</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Biżuteria</a></li>
@@ -78,37 +82,41 @@
                         </div>
                         <div class="navbar-right d-flex flex-column flex-md-row align-items-start align-items-md-center">
                             <ul class="navbar-nav flex-row align-items-center me-4">
-                                <li class="nav-item currency me-4">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>PLN</option>
-                                        <option value="EUR">EUR</option>
-                                        <option value="CZK">CZK</option>
-                                        <option value="HUF">HUF</option>
-                                        <option value="RON">RON</option>
-                                        <option value="HRK">HRK</option>
-                                    </select>
+                                <li class="nav-item currency me-2">
+                                    <div class="dropdown">
+                                        <button class="btn btn-white border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            PLN
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">EUR</a></li>
+                                            <li><a class="dropdown-item" href="#">CZK</a></li>
+                                            <li><a class="dropdown-item" href="#">HUF</a></li>
+                                            <li><a class="dropdown-item" href="#">RON</a></li>
+                                            <li><a class="dropdown-item" href="#">HRK</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
 
-                                <!-- Language -->
                                 <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/pl.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/en.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/de.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/cz.svg"></a>
-                                </li>
-                                <li class="nav-item lang">
-                                    <a class="nav-link" href="#"><img src="assets/img/lang/ru.svg"></a>
+                                    <div class="dropdown">
+                                        <button class="btn btn-white border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="assets/img/lang/pl.svg">
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/en.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/de.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/cz.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/ru.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/li.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/cr.svg"></a></li>
+                                            <li><a class="dropdown-item" href="#"><img src="assets/img/lang/hu.svg"></a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
 
                             <!-- Button -->
-                            <a class="btn btn-primary text-nowrap" href="#">Pobierz eKatalog</a>
+                            <a class="btn btn-primary text-nowrap my-3 my-md-0" href="#">Pobierz eKatalog</a>
                         </div>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -135,20 +143,18 @@
 
             <div class="row">
                 <div class="col-12">
-                    
                     <div class="categories d-flex flex-column flex-md-row align-items-center py-5">
                         <p class="mb-4 mb-lg-0 me-md-auto fw-medium text-nowrap">Kategorie w sklepie</p>
-                        <div class="d-flex flex-column flex-md-row justify-content-end flex-wrap">
+                        <div class="d-flex justify-content-center justify-content-md-end flex-wrap">
                             <a href="" class="btn btn-category my-2">Biżuteria</a>
                             <a href="" class="btn btn-category my-2">Zapachy damskie</a>
                             <a href="" class="btn btn-category my-2">Zapachy męskie</a>
                             <a href="" class="btn btn-category my-2">Kosmetyki</a>
                             <a href="" class="btn btn-category my-2">Manicure</a>
-                            <a href="" class="btn btn-category my-2 active">Wellness</a>
+                            <a href="" class="btn btn-category my-2">Wellness</a>
                             <a href="" class="btn btn-category my-2">Mapeup</a>
                         </div>
                     </div>
-                    
                 </div>
             </div>
 
@@ -167,7 +173,7 @@
                                     <a href="" data-bs-toggle="modal" data-bs-target="#addtocart"><img src="assets/img/add_to_cart.svg"></a>
                                 </div>
                                 <div>
-                                    <a href=""><img src="assets/img/arrow_right.svg"></a>
+                                    <a href="" class="stretched-link"><img src="assets/img/arrow_right.svg"></a>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +194,7 @@
                                     <a href="" data-bs-toggle="modal" data-bs-target="#addtocart"><img src="assets/img/add_to_cart.svg"></a>
                                 </div>
                                 <div>
-                                    <a href=""><img src="assets/img/arrow_right.svg"></a>
+                                    <a href="" class="stretched-link"><img src="assets/img/arrow_right.svg"></a>
                                 </div>
                             </div>
                         </div>
@@ -209,7 +215,7 @@
                                     <a href="" data-bs-toggle="modal" data-bs-target="#addtocart"><img src="assets/img/add_to_cart.svg"></a>
                                 </div>
                                 <div>
-                                    <a href=""><img src="assets/img/arrow_right.svg"></a>
+                                    <a href="" class="stretched-link"><img src="assets/img/arrow_right.svg"></a>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +236,7 @@
                                     <a href="" data-bs-toggle="modal" data-bs-target="#addtocart"><img src="assets/img/add_to_cart.svg"></a>
                                 </div>
                                 <div>
-                                    <a href=""><img src="assets/img/arrow_right.svg"></a>
+                                    <a href="" class="stretched-link"><img src="assets/img/arrow_right.svg"></a>
                                 </div>
                             </div>
                         </div>
