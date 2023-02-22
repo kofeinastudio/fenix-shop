@@ -253,6 +253,19 @@ input{
     opacity: .7;
 }
 
+.row.row-cols-1.row-cols-md-2.row-cols-lg-3.row-cols-xl-4 .card{
+    height: 100%;
+}
+
+.row.row-cols-1.row-cols-md-2.row-cols-lg-3.row-cols-xl-4 .card .card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.row.row-cols-1.row-cols-md-2.row-cols-lg-3.row-cols-xl-4 .card .card-bottom{
+    margin-top: auto;
+}
+
 /* Modal */
 .modal-content{
     border: 0 !important;
@@ -352,5 +365,5 @@ input{
 
 a[data-bs-target="#addtocart"]{
     position: relative;
-    z-index: 9999 !important;
+    z-index: 9 !important;
 }
